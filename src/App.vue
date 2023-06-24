@@ -1,12 +1,25 @@
 <template>
   <div id="app">
+    <h1>重学vue2</h1>
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link v-for="route in routes" :key="route.name" :to="route.path">{{
+        route.name
+      }}</router-link>
     </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script>
+import { routes } from './router';
+export default {
+  data() {
+    return {
+      routes,
+    };
+  },
+};
+</script>
 
 <style>
 #app {
@@ -24,6 +37,7 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+  margin: 0 16px;
 }
 
 nav a.router-link-exact-active {
