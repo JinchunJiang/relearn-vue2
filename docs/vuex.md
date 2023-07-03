@@ -8,11 +8,18 @@ vuex 是用于 vue 中管理全局状态的库。
 # 简单的 Store
 
 ```js
+// store/index.js
+import Vue from 'vue';
+import Vuex from 'vuex';
+Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     // ...
   },
 });
+export default store;
+
+// main.js
 new Vue({
   // ...
   store,
