@@ -25,7 +25,7 @@ routes.push({
   component: () => import('../views/嵌套路由/index.vue'),
   children: [
     // 未匹配到其他子路由时
-    { path: '', component: UserHome },
+    // { path: '', component: UserHome },
     {
       // 当 /user/:id/profile 匹配成功，
       // UserProfile 会被渲染在 User 的 <router-view> 中
